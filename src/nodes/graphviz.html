@@ -1,0 +1,62 @@
+<script type="text/javascript">
+    let graphviz = {
+        category: 'output',
+        color: '#A600CF',
+        defaults: {
+            name: {value:"", required: true},
+            engine: {value:"", required: false},
+            format: {value:"", required: false}
+        },
+        inputs:1,
+        outputs:1,
+        align: 'right',
+        icon: "file.png",
+        paletteLabel: "function",
+        label: function() {
+            return this.name||"graphviz";
+        },
+        oneditsave: function() {
+            // Reset all values when no action has been specified
+            // (because then no fields will be visible to specify data)
+            if ($("#node-input-engine").val() === "") {
+                // No fields yet ...
+            }
+        }
+    };
+    RED.nodes.registerType('graphviz', graphviz);
+</script>
+
+<script type="text/x-red" data-template-name="graphviz">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-engine"><i class="fa fa-tag"></i> Engine:</label>
+        <select id="node-input-engine">
+                <option value="" ></option>
+                <option value="circo" >circo</option>
+                <option value="dot" >dot</option>
+                <option value="fdp" >fdp</option>
+                <option value="neato" >neato</option>
+                <option value="osage" >osage</option>
+                <option value="twopi" >twopi</option>
+              </select>
+    </div>
+        <div class="form-row">
+        <label for="node-input-format"><i class="fa fa-tag"></i> Format:</label>
+        <select id="node-input-format">
+                <option value="" ></option>
+                <option value="svg" >svg</option>
+                <option value="png-image-element" >png-image-element</option>
+                <option value="json" >json</option>
+                <option value="xdot" >xdot</option>
+                <option value="plain" >plain</option>
+                <option value="ps" >ps</option>
+              </select>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="graphviz">
+    <p> beginn </p>
+</script>
