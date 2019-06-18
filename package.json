@@ -1,6 +1,6 @@
 {
-  "name": "@gordon.brueggemann/node-red-contrib-graph-viz",
-  "version": "0.0.1",
+  "name": "node-red-contrib-graph-viz",
+  "version": "0.0.2",
   "description": "generate graph-viz image",
   "keywords": [
     "Graphviz"
