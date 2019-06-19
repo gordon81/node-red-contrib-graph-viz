@@ -3,7 +3,8 @@
   "version": "0.0.2",
   "description": "generate graph-viz image",
   "keywords": [
-    "Graphviz"
+    "Graphviz",
+    "node-red"
   ],
   "author": "Gordon Brüggemann",
   "license": "ISC",
